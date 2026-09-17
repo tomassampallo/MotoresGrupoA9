@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-// Mecánica principal del prototipo: el jugador se fortalece consumiendo sangre
+// mecánica principal del prototipo, el jugador se fortalece consumiendo sangre
 // de los enemigos derrotados, pero si pasa mucho tiempo sin alimentarse, se debilita.
 public class BloodMeter : MonoBehaviour
 {

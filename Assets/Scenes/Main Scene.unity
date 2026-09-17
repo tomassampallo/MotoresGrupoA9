@@ -423,8 +423,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractionRaycast
   interactRange: 10
   interactableMask:
+<<<<<<< Updated upstream
     serializedVersion: 2
     m_Bits: 128
+=======
+    m_Bits: 128
+  playerCamera: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!114 &474096852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -440,9 +445,15 @@ MonoBehaviour:
   attackRange: 1.5
   attackDamage: 20
   enemyMask:
+<<<<<<< Updated upstream
     serializedVersion: 2
     m_Bits: 64
   attackOrigin: {fileID: 1862861377}
+=======
+    m_Bits: 64
+  attackOrigin: {fileID: 1862861377}
+  bloodMeter: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!114 &474096853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,12 +472,24 @@ MonoBehaviour:
   weakThreshold: 20
   weakenedSpeedMultiplier: 0.5
   weakenedDamageMultiplier: 0.5
+<<<<<<< Updated upstream
   onBecomeWeakened:
     m_PersistentCalls:
       m_Calls: []
   onRecoverStrength:
     m_PersistentCalls:
       m_Calls: []
+=======
+  <IsWeakened>k__BackingField: 0
+  onBecomeWeakened:
+    m_PersistentCalls:
+      m_Calls: []
+    m_CallsDirty: 1
+  onRecoverStrength:
+    m_PersistentCalls:
+      m_Calls: []
+    m_CallsDirty: 1
+>>>>>>> Stashed changes
 --- !u!114 &474096854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,8 +510,19 @@ MonoBehaviour:
   groundCheck: {fileID: 486224713}
   groundDistance: 0.3
   groundMask:
+<<<<<<< Updated upstream
     serializedVersion: 2
     m_Bits: 4294967295
+=======
+    m_Bits: 4294967295
+  controller: {fileID: 0}
+  moveInput: {x: 0, y: 0}
+  sprintHeld: 0
+  jumpPressed: 0
+  velocity: {x: 0, y: 0, z: 0}
+  isGrounded: 0
+  cameraTransform: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!143 &474096855
 CharacterController:
   m_ObjectHideFlags: 0
@@ -703,6 +737,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   maxHealth: 30
   bloodPickupPrefab: {fileID: 3388189847316832699, guid: 067d52304fb5d4a4a89e09e65a74540f, type: 3}
+<<<<<<< Updated upstream
+=======
+  currentHealth: 0
+  isDead: 0
+>>>>>>> Stashed changes
 --- !u!65 &516792337
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -829,8 +868,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DetectionZone
   zoneRenderer: {fileID: 1056625802}
+<<<<<<< Updated upstream
   safeColor: {r: 0, g: 1, b: 0, a: 1}
   detectedColor: {r: 1, g: 0, b: 0, a: 1}
+=======
+  safeColor:
+    r: 0
+    g: 1
+    b: 0
+    a: 1
+  detectedColor:
+    r: 1
+    g: 0
+    b: 0
+    a: 1
+>>>>>>> Stashed changes
 --- !u!65 &1056625801
 BoxCollider:
   m_ObjectHideFlags: 0

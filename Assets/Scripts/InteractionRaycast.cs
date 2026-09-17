@@ -1,6 +1,8 @@
 using UnityEngine;
 
 // Lanza un raycast desde la cámara hacia adelante para detectar objetos interactuables.
+// El Interactable Mask debe incluir SOLO la layer "Interactable" (no "Everything"),
+// así el rayo no choca contra el propio Player que está siempre en el camino.
 public class InteractionRaycast : MonoBehaviour
 {
     [SerializeField] private float interactRange = 3f;

@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask groundMask;
 
     private CharacterController controller;
-    private PlayerInputActions inputActions; // clase generada por el Input Actions Asset (ver notas abajo)
+    private PlayerInputActions inputActions; // clase generada por el Input Actions Asset
 
     private Vector2 moveInput;
     private bool sprintHeld;

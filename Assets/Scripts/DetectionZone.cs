@@ -20,7 +20,6 @@ public class DetectionZone : MonoBehaviour
         if (other.CompareTag("Player") && zoneRenderer != null)
         {
             zoneRenderer.material.color = detectedColor;
-            Debug.Log("El jugador fue detectado en la zona.");
         }
     }
 

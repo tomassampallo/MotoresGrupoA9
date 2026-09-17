@@ -32,6 +32,9 @@ public class CombatController : MonoBehaviour
 
     private void TryAttack()
     {
+        // Validación para evitar NullReferenceException si no se asignó en el Inspector
+        if (attackOrigin == null) return;
+
         Collider[] hits = Physics.OverlapSphere(attackOrigin.position, attackRange, enemyMask);
 
         float damageMultiplier = bloodMeter != null ? bloodMeter.GetDamageMultiplier() : 1f;

@@ -9,7 +9,7 @@ public class MemoryFragment : MonoBehaviour, IInteractable
     public void Interact()
     {
         Debug.Log(memoryText);
-        // Más adelante esto podría disparar un evento de UI o de sonido.
+        // mas adelante esto podría disparar un evento de UI o de sonido.
         Destroy(gameObject);
     }
 }

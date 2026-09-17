@@ -29,12 +29,12 @@ public class PlayerController : MonoBehaviour
     private BloodMeter bloodMeter;
     private Transform cameraTransform;
 
-    // Entradas del New Input System
+
     private Vector2 moveInput;
     private bool sprintHeld;
     private bool jumpPressed;
 
-    // Estado físico
+ 
     private Vector3 velocity;
     private bool isGrounded;
     private bool wasGrounded = true;
@@ -101,14 +101,14 @@ public class PlayerController : MonoBehaviour
         {
             AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
 
-            // Aterrizaje pesado: el personaje se frena completamente
+            // aterrizaje pesado, el personaje se frena completamente
             if (stateInfo.IsTag("Land"))
             {
                 animator.SetFloat("Speed", 0f, 0.1f, Time.deltaTime);
                 return;
             }
 
-            // Roll: movimiento automático con desaceleración paulatina
+            // roll, movimiento automatico con desaceleración
             if (stateInfo.IsTag("Roll") && stateInfo.normalizedTime < 1f)
             {
                 float rollFade = Mathf.Max(1f - stateInfo.normalizedTime, 0.4f);
@@ -117,7 +117,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // Dirección de movimiento orientada a la cámara
+        // Dirección de movimiento orientada a la camara
         Vector3 camForward = cameraTransform != null ? cameraTransform.forward : transform.forward;
         Vector3 camRight = cameraTransform != null ? cameraTransform.right : transform.right;
         camForward.y = 0f;
@@ -138,7 +138,7 @@ public class PlayerController : MonoBehaviour
             controller.Move(moveDirection.normalized * currentSpeed * Time.deltaTime);
         }
 
-        // Actualización de parámetros en Animator
+        // actualizacion de parámetros en Animator
         if (animator != null)
         {
             float speedPercent = moveInput.magnitude * (sprintHeld ? 1f : 0.5f);
@@ -185,7 +185,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // Aplicación de la gravedad
+        // aplicación de la gravedad
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
 
